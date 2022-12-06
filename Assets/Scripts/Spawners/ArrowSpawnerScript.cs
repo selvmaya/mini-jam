@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using Tools.Helpers;
+using Tools.Types;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Spawners
 {
-	public class ArrowSpawnerScript : MonoBehaviour
+	public class ArrowSpawnerScript : Singleton<ArrowSpawnerScript>
 	{
 		[SerializeField] private float spawnDelay = 1f;
 		[SerializeField] private List<ArrowContainer> arrows = new List<ArrowContainer>();

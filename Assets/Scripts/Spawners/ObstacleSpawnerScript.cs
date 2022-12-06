@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using Tools.Types;
 using UnityEngine;
 
@@ -8,11 +9,12 @@ namespace Spawners
 		private Camera _cam;
 		private Camera Cam => _cam != null ? _cam : _cam = Camera.main;
 
-		[SerializeField] private GameObject obstacle;
+		[SerializeField, Required] private GameObject obstacle;
 
 		public void TrySpawnAtPos(Vector2 aimPos)
 		{
-			Instantiate(obstacle, Cam.ScreenToWorldPoint(aimPos), Quaternion.identity);
+			Vector3 pos = Cam.ScreenToWorldPoint(aimPos);
+			Instantiate(obstacle, pos, Quaternion.identity);
 		}
 	}
 }

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e4dcd00ef9f51004d8ea9451a0e83503, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -124,10 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925fd57290436fb4f8560e3392a599eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnDelay: 0
-  despawnCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  despawnDelay: 1

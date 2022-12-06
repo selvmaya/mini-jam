@@ -242,22 +242,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1475456392734635234, guid: 5f7c9f4b75ca5364fac9561978c639ba, type: 3}
-      propertyPath: m_Size.x
-      value: 2.6666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 1475456392734635234, guid: 5f7c9f4b75ca5364fac9561978c639ba, type: 3}
-      propertyPath: m_Size.y
-      value: 2.6666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 1475456392734635234, guid: 5f7c9f4b75ca5364fac9561978c639ba, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 1475456392734635232, guid: 5f7c9f4b75ca5364fac9561978c639ba, type: 3}
+      propertyPath: canvas
       value: 
-      objectReference: {fileID: -1431360935, guid: 591c0a76c5c34eb4aa46ad0029cfd1ac, type: 3}
-    - target: {fileID: 1475456392734635234, guid: 5f7c9f4b75ca5364fac9561978c639ba, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5582087564010650794}
     - target: {fileID: 1475456392734635235, guid: 5f7c9f4b75ca5364fac9561978c639ba, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -508,7 +496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 711829054536940231, guid: 53d8d4e16e622a34a8f8da244d21b517, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 711829054536940233, guid: 53d8d4e16e622a34a8f8da244d21b517, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 711829054536940235, guid: 53d8d4e16e622a34a8f8da244d21b517, type: 3}
       propertyPath: m_Pivot.x
@@ -597,6 +589,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 53d8d4e16e622a34a8f8da244d21b517, type: 3}
+--- !u!223 &5582087564010650794 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 711829054536940234, guid: 53d8d4e16e622a34a8f8da244d21b517, type: 3}
+  m_PrefabInstance: {fileID: 5582087564010650793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8170989136519844049
 PrefabInstance:
   m_ObjectHideFlags: 0
