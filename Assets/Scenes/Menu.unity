@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &398894289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 398894289, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
+  m_PrefabInstance: {fileID: 4599736675174722214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &563054941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -461,7 +472,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4599736675174722214
 PrefabInstance:
@@ -471,6 +482,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 398894287, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
+      propertyPath: m_Name
+      value: Transition panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 398894289, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 398894289, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 398894289, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 398894289, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4599736675393578737, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
       propertyPath: m_Name
       value: Menu UI
@@ -485,7 +516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4599736675393578749, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4599736675393578749, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -559,10 +590,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4599736675756124624, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -29.8
-      objectReference: {fileID: 0}
     - target: {fileID: 4599736675756124625, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -627,21 +654,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7703640167766597775, guid: 48729772b51bbb347938158b0f830084, type: 3}
-      propertyPath: menuScene.scenePath
-      value: Assets/Scenes/Menu.unity
+      propertyPath: transitionDelay
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7703640167766597775, guid: 48729772b51bbb347938158b0f830084, type: 3}
-      propertyPath: levelScene.scenePath
-      value: Assets/Scenes/Game.unity
+      propertyPath: transitionImage
+      value: 
+      objectReference: {fileID: 398894289}
+    - target: {fileID: 7703640167766597775, guid: 48729772b51bbb347938158b0f830084, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[0].inSlope
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7703640167766597775, guid: 48729772b51bbb347938158b0f830084, type: 3}
-      propertyPath: menuScene.sceneAsset
-      value: 
-      objectReference: {fileID: 102900000, guid: 3375db5a08dd3bf4f82c02f307f35af3, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7703640167766597775, guid: 48729772b51bbb347938158b0f830084, type: 3}
-      propertyPath: levelScene.sceneAsset
-      value: 
-      objectReference: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703640167766597775, guid: 48729772b51bbb347938158b0f830084, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703640167766597775, guid: 48729772b51bbb347938158b0f830084, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703640167766597775, guid: 48729772b51bbb347938158b0f830084, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 48729772b51bbb347938158b0f830084, type: 3}
