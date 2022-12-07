@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AT1
   m_EditorClassIdentifier: 
   prefab: {fileID: 2260211893248953685, guid: f2768760008914f47997c4d04238a7f8, type: 3}
-  moveSpeed: 1
+  moveSpeed: 5
   relativeChance: 1

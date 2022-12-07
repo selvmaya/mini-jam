@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &1136615838480925706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3333334, y: 1.3333334}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &3331584377708681155
 MonoBehaviour:
@@ -124,4 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925fd57290436fb4f8560e3392a599eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnDelay: 1
+  despawnStartDelay: 1
+  despawnDuration: 2

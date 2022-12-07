@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff081442314fc1d4395d15c223850833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 1
   sfx: {fileID: 8300000, guid: 5d97cfd7097affb4f97ca0f971afc996, type: 3}
-  <Damage>k__BackingField: 1
 --- !u!212 &2260211893248953684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -102,7 +102,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
+  m_SpriteSortPoint: 0
 --- !u!61 &9003226940791411795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.5833334, y: 0.25, z: 0.6666667, w: 0.16666667}
+    border: {x: 0.4166667, y: 0.083333336, z: 0.5, w: 0.083333336}
     pivot: {x: 0.46875, y: 0.5}
     oldSize: {x: 1.3333334, y: 1.3333334}
     newSize: {x: 1.3333334, y: 1.3333334}
@@ -127,7 +127,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12, y: 0.95}
+  m_Size: {x: 0.4220644, y: 1.1679773}
   m_EdgeRadius: 0
 --- !u!50 &6097549948478079017
 Rigidbody2D:
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!82 &7453450625799841406
 AudioSource:
   m_ObjectHideFlags: 0

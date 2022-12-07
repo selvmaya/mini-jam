@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using Spawners;
 using Tools.Types;
 using UnityEngine;
 
@@ -47,6 +48,14 @@ public class HeartScript : Singleton<HeartScript>
 			Audio.clip = deathSfx;
 			Sprite.sprite = deadSprite;
 			canvas.gameObject.SetActive(true);
+			if (ArrowSpawnerScript.Exists)
+			{
+				ArrowSpawnerScript.Instance.CanSpawnArrows = false;
+			}
+			if (ObstacleSpawnerScript.Exists)
+			{
+				ObstacleSpawnerScript.Instance.CanSpawnBlocks = false;
+			}
 		}
 		Audio.Play();
 	}

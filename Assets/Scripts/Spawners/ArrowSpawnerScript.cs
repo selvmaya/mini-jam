@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Tools.Helpers;
@@ -13,10 +14,16 @@ namespace Spawners
 		[SerializeField] private List<ArrowContainer> arrows = new List<ArrowContainer>();
 
 		private float _lastSpawnTime;
+		public bool CanSpawnArrows { private get; set; } // also set by heart when it dies
+
+		private void Start()
+		{
+			CanSpawnArrows = true;
+		}
 
 		private void FixedUpdate()
 		{
-			if (_lastSpawnTime.TimeSince() >= spawnDelay)
+			if (CanSpawnArrows && _lastSpawnTime.TimeSince() >= spawnDelay)
 			{
 				SpawnArrow();
 			}
@@ -25,10 +32,10 @@ namespace Spawners
 		private void SpawnArrow()
 		{
 			ArrowContainer arrow = GetRandomArrow();
-			(Vector2 pos, Vector2 dir) = GetRandomVector();
+			Vector2 pos = GetRandomPosition();
 			GameObject arrowObject = Instantiate(arrow.prefab, pos, Quaternion.identity);
 			Rigidbody2D arrowRb = arrowObject.GetComponent<Rigidbody2D>();
-			arrowRb.velocity = dir * arrow.moveSpeed;
+			arrowRb.velocity = -pos.normalized * arrow.moveSpeed;
 			_lastSpawnTime = Time.time;
 		}
 
@@ -55,18 +62,15 @@ namespace Spawners
 
 		private Camera _cam;
 		private Camera Cam => _cam != null ? _cam : _cam = Camera.main;
-		private (Vector2 pos, Vector2 dir) GetRandomVector()
+		private Vector2 GetRandomPosition()
 		{
 			float height = Cam.orthographicSize;
-			Vector2 size = new Vector2(height * Cam.aspect, height);
-			Vector2 cornerOffset = size / 2;
-			Vector2Int swapper = new Vector2Int(RandSignedInt, RandSignedInt);
-			Vector2 pos = cornerOffset * swapper;
-			Vector2 dir = -pos.normalized;
-			return (pos, dir);
+			Vector2 corner = new Vector2(Cam.aspect * height, height);
+			Vector2 randomPos = corner.magnitude * Random.insideUnitCircle.normalized;
+			return randomPos;
 		}
 
-		private static int RandSignedInt => RandBool ? 1 : -1;
-		private static bool RandBool => Random.value > 0;
+		private static int RandSignedInt => Random.value > 0.5f ? 1 : -1;
+		private static bool RandBool => Random.value > 0.5f;
 	}
 }
