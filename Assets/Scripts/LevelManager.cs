@@ -26,6 +26,7 @@ public class LevelManager : Singleton<LevelManager>
 	{
 		_waking = true;
 		_transitioning = true;
+		_transitionStartTime = Time.time;
 	}
 
 	private void Update()

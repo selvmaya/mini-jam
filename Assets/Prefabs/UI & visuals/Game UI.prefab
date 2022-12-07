@@ -97,6 +97,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4599736675393578751, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599736675393578751, guid: 7b7f7d91c3bc4cd49b4f3cad6122166e, type: 3}
       propertyPath: m_ReferencePixelsPerUnit
       value: 16
       objectReference: {fileID: 0}
