@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1475456392734635235}
   - component: {fileID: 1475456392734635232}
+  - component: {fileID: 1593705478018582734}
   - component: {fileID: 1475456392734635234}
   - component: {fileID: 1475456392734635233}
-  - component: {fileID: 840601334864684980}
   - component: {fileID: 6095749323342054469}
-  - component: {fileID: 4492586897555275802}
+  - component: {fileID: 796876750824605132}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1475456392734635232
 MonoBehaviour:
@@ -50,10 +50,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 10
-  damageSfx: {fileID: 8300000, guid: 51e7f94fe445f694eb0a6e9ba73c7c96, type: 3}
-  deathSfx: {fileID: 8300000, guid: b9a0adc1d5e3a994fa3ed6b24c88e779, type: 3}
+  damageSfx: {fileID: 8300000, guid: b9a0adc1d5e3a994fa3ed6b24c88e779, type: 3}
+  deathSfx: {fileID: 8300000, guid: ce9a2a1af0f93d9488021bde33abacd8, type: 3}
   deadSprite: {fileID: 2132875179, guid: 591c0a76c5c34eb4aa46ad0029cfd1ac, type: 3}
   canvas: {fileID: 0}
+--- !u!58 &1593705478018582734
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475456392734635237}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!212 &1475456392734635234
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -185,47 +201,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!60 &840601334864684980
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475456392734635237}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.6666667, y: 2.6666667}
-    newSize: {x: 2.6666667, y: 2.6666667}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.16666667, y: -0.33333334}
-      - {x: -0.5833334, y: 0.083333336}
-      - {x: -0.5833334, y: 0.4166667}
-      - {x: -0.4166667, y: 0.5833334}
-      - {x: -0.33333334, y: 0.5833334}
-      - {x: -0.083333336, y: 0.33333334}
-      - {x: 0.083333336, y: 0.33333334}
-      - {x: 0.33333334, y: 0.5833334}
-      - {x: 0.5833334, y: 0.5833334}
-      - {x: 0.5833334, y: 0.25}
-      - {x: 0, y: -0.33333334}
-    - - {x: -0.16666667, y: -0.33333334}
-      - {x: -0.16666667, y: -0.33333334}
-      - {x: 0, y: -0.33333334}
-      - {x: 0, y: -0.33333334}
-  m_UseDelaunayMesh: 0
 --- !u!82 &6095749323342054469
 AudioSource:
   m_ObjectHideFlags: 0
@@ -235,9 +210,9 @@ AudioSource:
   m_GameObject: {fileID: 1475456392734635237}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 035097ca8ad911747bc70e8be78df750, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -322,24 +297,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!50 &4492586897555275802
-Rigidbody2D:
+--- !u!95 &796876750824605132
+Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475456392734635237}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9919a03bf25dc2b4a8a1cab3a3ae3407, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

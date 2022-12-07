@@ -34,7 +34,7 @@ public class LevelManager : Singleton<LevelManager>
 
 		float rawT = _transitionStartTime.TimeSince() / transitionDelay;
 		if (_waking) rawT = 1 - rawT;
-		transitionImage.color = Color.Lerp(Color.black, Color.clear, rawT);
+		transitionImage.color = Color.Lerp(Color.clear, Color.black, rawT);
 		if (_transitionStartTime.TimeSince() >= transitionDelay)
 		{
 			_transitioning = false;

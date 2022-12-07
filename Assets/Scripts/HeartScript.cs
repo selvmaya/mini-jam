@@ -2,6 +2,7 @@ using Sirenix.OdinInspector;
 using Spawners;
 using Tools.Types;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Heart can be damaged by error. Defensive objective for the player.
@@ -18,7 +19,7 @@ public class HeartScript : Singleton<HeartScript>
 
 	[Header("Visuals")]
 	[SerializeField, Required] private Sprite deadSprite;
-	[SerializeField, Required] private Canvas canvas;
+	[SerializeField, Required] private Button button;
 
 	private int _health;
 
@@ -27,11 +28,13 @@ public class HeartScript : Singleton<HeartScript>
 
 	private SpriteRenderer _sprite;
 	private SpriteRenderer Sprite => _sprite != null ? _sprite : _sprite = GetComponent<SpriteRenderer>();
+	private Animator _anim;
+	private Animator Anim => _anim != null ? _anim : _anim = GetComponent<Animator>();
 
 	private void Start()
 	{
 		_health = startHealth;
-		canvas.gameObject.SetActive(false);
+		button.gameObject.SetActive(false);
 	}
 
 	public void Damage(int amount)
@@ -39,6 +42,7 @@ public class HeartScript : Singleton<HeartScript>
 		if (_health <= 0) return;
 
 		_health -= amount;
+		Anim.SetTrigger("Damage");
 		if (_health > 0) // alive
 		{
 			Audio.clip = damageSfx;
@@ -47,7 +51,7 @@ public class HeartScript : Singleton<HeartScript>
 		{
 			Audio.clip = deathSfx;
 			Sprite.sprite = deadSprite;
-			canvas.gameObject.SetActive(true);
+			button.gameObject.SetActive(true);
 			if (ArrowSpawnerScript.Exists)
 			{
 				ArrowSpawnerScript.Instance.CanSpawnArrows = false;
